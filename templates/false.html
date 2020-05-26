@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">User Not Exist!🙁🙁🙁🙁</h1>
+    <p class="lead">The username you type is not registerd in our Database.</p>
+    <hr class="my-4">
+    <p class="display-4"> Please Sign Up and Enjoy The Features of this App🙂🙂🙂🙂.</p>
+    <a class="btn btn-primary btn-lg" href="{{url_for('signup')}}" role="button">Signup</a>
+  </div>
+{% endblock %}

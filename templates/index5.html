@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ml API</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+        
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+
+	
+    </head>
+
+    <body style="background-color: darkorchid;">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="{{url_for('homes')}}">
+              <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+            </a>
+            
+            <!-- Links -->
+           
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/help"><b>Help</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/start"><b>Back</b></a>
+              </li>
+              
+              
+            </ul>
+          </nav>
+          <br>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ellen_H._Swallow_Richards_House_Boston_MA_01.jpg/1200px-Ellen_H._Swallow_Richards_House_Boston_MA_01.jpg" style="width: 100%;">
+        <h1 style="text-align: center;">House Price Prediction Analysis</h1>
+        <hr>
+        <br>
+        <form action="{{url_for('houseprice')}}" method="post" class="from-group" style="text-align: center;">
+            
+            <input style="width: 25%; background-color: darkmagenta;" type="text" name="Avg. Area Income" placeholder="Avg. Area Income" required="required">
+            <br>
+            <input style="width: 25%; background-color: darkmagenta" type="text" name="Avg. Area House Age" placeholder="Avg. Area House Age" required="required">
+            <br>
+            <input style="width: 25%; background-color: darkmagenta" type="text" name="Avg. Area Number of Rooms" placeholder="Avg. Area Number of Rooms" required="required">
+            <br>
+            <input style="width: 25%; background-color: darkmagenta" type="text" name="Avg. Area Number of Bedrooms" placeholder="Avg. Area Number of Bedrooms" required="required"> 
+            <br>
+            <input style="width: 25%; background-color: darkmagenta" type="text" name="Area Population" placeholder="Area Population" required="required">
+            <br><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        <br>
+        <h1>{{ prediction_text3 }}</h1>
+    </body>
+</html>

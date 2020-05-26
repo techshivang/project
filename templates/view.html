@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+    
+    <title>Client</title>
+</head>
+<body style="background-color: mediumpurple;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="{{url_for('homes')}}">
+          <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+        </a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/start"><b>Back</b></a>
+          </li>
+          
+          
+        </ul>
+      </nav>
+        
+    
+    <div class="container" style="padding: 0; text-align: center;">
+        <h1 style="text-align: center; color:black;">Our Client<br>
+            👨‍💼👨‍💼👨‍💼
+        </h1>
+        <hr>
+    <table class="table" style="font-family: Arial, Helvetica, sans-serif; margin-right: 500px;">
+        <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>MobileNumber</th>
+            <th>Country</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mobile_number}}</td>
+            <td>{{user.country}}</td>            
+        </tr>
+
+        {% endfor %}
+    </tbody>
+
+    </table>
+</div>
+       
+    {% block content %}
+    {% endblock %}
+
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="static/vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="static/vendor/select2/select2.min.js"></script>
+
+	<script src="static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="static/vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="static/vendor/countdowntime/countdowntime.js"></script>
+
+</body>
+</html>

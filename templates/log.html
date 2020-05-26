@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Oops Wrong Password😟!</h1>
+    <p class="lead">you type an incoorect Password.</p>
+    <hr class="my-4">
+    <p> Go to Forgot Password Option If you not remeber Your Password.</p>
+    <a class="btn btn-primary btn-lg" href="{{url_for('update')}}" role="button">Forgot Password</a>
+  </div>
+{% endblock %}

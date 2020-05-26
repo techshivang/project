@@ -1,0 +1,511 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    #section1{
+      height: 700px;
+      background: pink;
+      display: inline-block;
+      width: 100%;
+    }
+
+    #section2{
+      display: inline-block;
+    }
+
+    #section3{
+      display: inline-block;
+    }
+
+    #section4{
+      display: inline-block;
+    }
+
+  
+ 
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', sans-serif;
+            }
+            a{
+      padding: 20px;
+      width: 100px;
+      display:inline-block;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold; 
+    }
+
+    
+.wrapper{
+  margin-top: 10%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+            /* Make the image fully responsive */
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+            .navbar {
+  width: 100%;
+  background-color: #555;  
+}
+            </style>
+            
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="{{url_for('homes')}}">
+                <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+              </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#section1">About</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{{url_for('about')}}">Team</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#section3">Gallery</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{{url_for('view')}}">Client</a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <b>Model </b>
+                    </a>
+                     
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{url_for('home')}}">OLA WEEKLY RIDES Prediction</a>
+                      <a class="dropdown-item" href="{{url_for('health')}}">Breast Cancer Prediction</a>
+                      <a class="dropdown-item" href="{{url_for('hello_world')}}">Corona Virus Prediction</a>                      
+                      <a class="dropdown-item" href="{{url_for('students')}}">Student Academic Performance Prediction</a>
+                      <a class="dropdown-item" href="{{url_for('boston')}}">House Price Prediction</a>
+                      
+                    </div>
+
+
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#section4">Contact</a>
+                    </li>
+                    
+                  </ul>
+                  <div>
+                  <input type='search' list="datalist1" id='myid'>
+                  <datalist id="datalist1">
+                    <option>home</option>
+                    <option>About Us</option>
+                    <option>Client</option>
+                    <option>Logout</option>
+                  </datalist>
+                  <button onclick="myFunction()" class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+              </nav>
+
+              <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/static/Big-Data-Banner.png" alt="Los Angeles" width="1100" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/hospital.jpg" alt="Chicago" width="1100" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/ola.webp" alt="New York" width="1100" height="500">
+                  </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+        </header>
+
+        <!--About us-->
+        <section  style="background-color: orchid;">
+            <div class="container-fluid" id="section1">
+                <h1 class="text-center text-capitalize pt-5">About Us</h1>
+                <hr class="w-25 mx-auto pt-5">
+
+                <div class="row mb-5">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <img src="/static/images/bussiness1.jpg" class="img-fluid">
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h1>What is Business Intelligence?></h1>
+                        <hr>
+                        <p>
+                          BI(Business Intelligence) is a set of processes, architectures, and technologies that convert raw data into meaningful information that drives profitable business actions.It is a suite of software and services to transform data into actionable intelligence and knowledge.
+
+                          BI has a direct impact on organization's strategic, tactical and operational business decisions. BI supports fact-based decision making using historical data rather than assumptions and gut feeling.
+                          
+                          BI tools perform data analysis and create reports, summaries, dashboards, maps, graphs, and charts to provide users with detailed intelligence about the nature of the business.
+                        </p>
+                        <button class="btn btn-primary">Wanna Know More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About us end-->
+        <!--service part-->
+        
+        <section style="background-color: midnightblue;">
+          <div class="container" id="section2">
+              <h1 class="text-center text-capitalize pt-5">Our Services</h1>
+              <b><hr class="w-25 mx-auto pt-5"></b>
+          </div>
+          
+          <div class="row text-center mb-5">
+              <div class="col-lg-4 col-md-4 col-12">
+                  <div class="card">
+                      <img class="card-img-top" src="/static/images/education.jpg" alt="Card image" style="height: 332px;">
+                      <div class="card-body">
+                        <h4 class="card-title">Educations</h4>
+                        <!-- <p class="card-text">
+                          
+      .
+                        </p> -->
+                        <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+                      </div>
+                  </div>
+        
+              </div>
+        
+              <div class="col-lg-4 col-md-4 col-12">
+                  <div class="card">
+                      <img class="card-img-top" src="/static/images/hospital.jpg" alt="Card image" style="height: 332px;">
+                      <div class="card-body">
+                        <h4 class="card-title">HeathCare</h4>
+                      
+                      </div>
+                  </div>
+        
+              </div>
+        
+              <div class="col-lg-4 col-md-4 col-12">
+                  <div class="card" style="width:400px">
+                      <img class="card-img-top" src="/static/images/bussiness1.jpg" alt="Card image" style="height: 332px;">
+                      <div class="card-body">
+                        <h4 class="card-title">Other</h4>
+                        
+                      </div>
+                  </div>
+        
+              </div>
+          </div>
+        </section>
+        <!--service part end-->
+
+        <!--contact demo-->
+
+        <section class="bg-primary">
+            <article class="py-5 text-center text-white">
+                <div>
+                    <h3 class="display-4 text-white">+91 9621299170</h3>
+                    <p>If you want ask any query Call us Now.</p>
+                    <button class="btn btn-warning">Contant Now</button>
+                </div>
+            </article>
+        </section>
+        <!--contact demo end-->
+
+        <!--gallery start-->
+        <section style="background-color: indigo;">
+            <div class="container" id="section3">
+                <h1 class="text-center text-capitalize pt-5">Gallery</h1>
+                <hr class="w-25 mx-auto pt-5">
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/bussiness1.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/hospital.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/bussiness3.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/bussiness4.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/hospital1.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+
+                    <div class="col-lg-4 col-md-2 col-12 mb-4">
+                        <img src="/static/images/education.jpg" class="img-fluid" style="width: 589px; height: 332px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--gallery end-->
+
+        <!--Register form in short-->
+
+        <section class="bg-primary">
+            <article class="py-5">
+                <div class="text-center text-white">
+                    <h3 class="display-4 text-white">Want to Join Us</h3>
+                    <p>Be a Part of ShivangSaxena website.</p>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Join Now</button>
+                </div>
+
+                 <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Sign Up</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form onsubmit="return message()">
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="email" class="form-control" placeholder="Enter email" id="email" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+            </article>
+        </section>
+        <!--REgister end-->
+
+        <!--Contact us start-->
+
+        <section style="background-color: darkmagenta;">
+            <div class="container mb-5" id="section4">
+                <h1 class="text-center text-capitalize pt-5">Contact Us</h1>
+                <hr class="w-25 mx-auto pt-5">
+            </div>
+
+            <div class="w-50 mx-auto ">
+                <form onsubmit="return Contact()">
+                    <div class="form-group">
+                      <label for="email">Your Name:</label>
+                      
+                      <input type="text" class="form-control" placeholder="Enter your name" id="name" autocomplete="off",required=required>
+                      <span id="nameerror"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="pwd">Email:</label>
+                      <input type="email" class="form-control" placeholder="Enter Email" id="email" required=required>
+                      <span id="emailerror"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Mobile Number:</label>
+                        <input type="number" class="form-control" placeholder="Enter Mobile Number" id="mob" required=required>
+                        <span id="moberror"></span>
+                      </div>
+
+                    <div class="form-group">
+                      <label for="pwd">Message Request:</label>
+                      <input type="text" class="form-control" placeholder="Enter Message Request" id="req" required=required list="datalist2">
+                      <span id="messerror"></span>
+                      <datalist id="datalist2">
+                        <option>Query</option>
+                        <option>Request</option>
+                        <option>Suggestion</option>
+                        <option>Other</option>
+                      </datalist>
+                  </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="mess" required=required> Remember me
+                        <span id="texterror"></span>
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="margin-bottom: 10px;">Send</button>
+                  </form>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <footer>
+            <p class="text-center bg-dark text-white mb-0 margin:2px"> @copyright ShivangSaxena.com 2020 </p>
+        </footer>
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script>
+          function Contact(){
+            var name1=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var mobile=document.getElementById("mob").value;
+            var request=document.getElementById("req").value;
+            var message=document.getElementById("mess").value;
+
+        alert("Thanks for Joining Us🙂🙂🙂🙂🙂");              
+       }
+        
+        </script>
+
+        <script>
+          function myFunction(){
+            var a = document.getElementById('myid').value;
+            if(a=='home'){
+                location.replace("{{url_for('homes')}}")
+            }else if(a=='About Us'){
+              location.replace("{{url_for('about')}}")
+            }else if(a=='Client'){
+              location.replace("{{url_for('view')}}")
+            }else if(a=='Logout'){
+              location.replace("{{url_for('login')}}")
+            }else{
+              alert('You Type an incorrect url Please type url which shown in Dropdwon.');
+            }
+          }
+        </script>
+
+        <script>
+          function message(){
+            alert('Thanks for join Us we provide you the latest information regarding our website');
+          }
+        </script>
+
+        
+
+        {% block content %}
+        {% endblock %}
+    </body>
+
+</html>

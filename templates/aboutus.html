@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>Our Team Section</title>
+       
+  <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #81c644;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="{{url_for('homes')}}">
+      <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/start"><b>Back</b></a>
+      </li>
+      
+      
+    </ul>
+  </nav>
+
+<div class="wrapper">
+  <h1>Our Team</h1>
+  <div class="team">
+    <div class="team_member">
+      <div class="team_img">
+        <img src="/static/images/circle-cropped.png" alt="Team_image">
+      </div>
+      <h3>Shivang Saxena</h3>
+      <p class="role">Python developer</p>
+      <p>He is a Software Developer who design all the Coding Part in this Project
+        and all the analysis which is required for this Project.He handle and solve
+        all the bug which come during the development of model.For any information
+        or query regarding This project implementation follow him on Linkdin Here is the url
+        for this.
+        <a href="https://www.linkedin.com/in/shivang-saxena-381239170/">Linkdin</a> 
+      </p>
+    </div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="" alt="">
+      </div>
+      <h3>Fuzail Khan</h3>
+      <p class="role">Tester</p>
+      <p>He is a analytics Engineer who work on Bigdata all the dataset used in This
+        project are analysis by him and he prepared useful data for the development
+        team so that they can build there model effictively.
+      </p></div>
+    <div class="team_member">
+      <div class="team_img">
+        <img src="" alt="">
+      </div>
+      <h3>Ashutosh Viswakarma and Ankit Mohan</h3>
+      <p class="role">Support Lead</p>
+      <p>So they both are android developer who help in this project by giving their
+        knowledge in the field of app desining and deployment they both work as a Support
+        member whose help the team member when team faces a problem like get the 
+        data from url and deployment tasks.
+      </p>
+    </div>
+  </div>
+</div>	
+
+</body>
+</html>

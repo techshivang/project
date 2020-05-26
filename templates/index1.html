@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Uber Rides Prediction Model</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+
+	
+    </head>
+
+    <body style="background-color: darkmagenta;">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="{{url_for('homes')}}">
+              <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+            </a>
+            
+            <!-- Links -->
+            
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/help"><b>Help</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/start"><b>Back</b></a>
+              </li>
+              
+              
+            </ul>
+          </nav>
+        <h1>Uber Weekly Rides Analysis</h1>
+        <br>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="Priceperweek" placeholder="Priceperweek" required="required">
+            <input type="text" name="Population" placeholder="Population" required="required">
+            <input type="text" name="Monthlyincome" placeholder="Monthlyincome" required="required">
+            <input type="text" name="Averageparkingpermonth" placeholder="Averageparkingpermonth" required="required">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+        <br>
+        <h1>{{ prediction_text }}</h1>
+    </body>
+</html>

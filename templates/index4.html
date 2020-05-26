@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+
+  <link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+  
+  <link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
+
+  <link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>ML API</title>
+</head>
+<body style="background-color: darkmagenta;">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="{{url_for('homes')}}">
+          <img src="https://www.logolynx.com/images/logolynx/e0/e04f14e385007436f832350e49b26470.png" style="width:200px;" alt="">
+        </a>
+        
+        <!-- Links -->
+        
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/help"><b>Help</b></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/start"><b>Back</b></a>
+          </li>
+          
+          
+        </ul>
+      </nav>
+
+    <h1 style="background-color: blue; text-align: center;">**Student Academic Performance Analysis**</h1>
+    <br>
+    
+    <div>
+        <img src="https://getmyuni.azureedge.net/college-image/big/kanpur-institute-of-technology-kit-kanpur.jpg" class="w3-border w3-padding" alt="Indian AI Hospital" style="width: 100%; height: 300px;">
+      </div>
+    <br>
+    <h1 style="text-align: center;">***Enter The Following Features of Student Academic Below***</h1>
+    <br>
+    <form action="{{url_for('student_performance')}}" method="post" style="margin-left: 150px;">
+        <input type="text"  name="raisedhands" placeholder="raisedhands">
+        <input type="text" name="VisITedResources" placeholder="VisITedResources">
+        <input type="text" name="AnnouncementsView" placeholder="AnnouncementsView">
+        <input type="text" name="Discussion" placeholder="Discussion">
+        <br>
+
+        <input type="text"  name="gender_Male" placeholder="gender_Male">
+        <input type="text" name="Middlelevel" placeholder="Middlelevel">
+        <input type="text" name="lowerlevel" placeholder="lowerlevel">
+        <input type="text" name="G-04" placeholder="G-04">
+        <br>
+
+        <input type="text"  name="G-05" placeholder="G-05">
+        <input type="text" name="G-06" placeholder="G-06">
+        <input type="text" name="G-07" placeholder="G-07">
+        <input type="text" name="G-08" placeholder="G-08">
+        <br>
+
+        <input type="text"  name="G-09" placeholder="G-09">
+        <input type="text" name="G-10" placeholder="G-10">
+        <input type="text" name="G-11" placeholder="G-11">
+        <input type="text" name="G-12" placeholder="G-12">
+        <br>
+        <input type="text"  name="B" placeholder="B">
+        <input type="text" name="C" placeholder="C">
+        <input type="text" name="Aptitude" placeholder="Aptitude">
+        <input type="text" name="Biology" placeholder="Biology">
+        <br>
+
+        <input type="text"  name="Chemistry" placeholder="Chemistry">
+        <input type="text" name="Computer Network" placeholder="Computer Network">
+        <input type="text" name="Computer Organization" placeholder="Computer Organization">
+        <input type="text" name="Data Structure" placeholder="Data Structure">
+        <br>
+
+        <input type="text"  name="Enviorment" placeholder="Enviorment">
+        <input type="text" name="Human Values" placeholder="Human Values">
+        <input type="text" name="Math" placeholder="Math">
+        <input type="text" name="Mechanics" placeholder="Mechanics">
+        <br>
+
+        <input type="text"  name="Programing" placeholder="Programing">
+        <input type="text" name="Semester_Spring" placeholder="Semester_Spring">
+        <input type="text" name="Parents_Mother" placeholder="Parents_Mother">
+        <input type="text" name="Parents_Answer_Survey_Yes" placeholder="Parents_Answer_Survey_Yes">
+        <br>
+
+        <input type="text"  name="Parents_Satisfaction_Good" placeholder="Parents_Satisfaction_Good">
+        <input type="text" name="Students_Absents_Under-7" placeholder="Students_Absents_Under-7">
+        
+        <br>
+        
+        <br>
+
+        <div class="button_cont">
+            <button type="submit" class="btn btn-primary btn-lg"><strong>Predict</strong></button></a>
+        </div>
+        
+    </form>
+    <br>
+    <br>
+    <h1 style="text-align: center;">{{ prediction_text2 }}</h1>
+    </form>
+</body>
+</html>

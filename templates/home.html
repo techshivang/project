@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% block content%}
+<div class="jumbotron" style="background-color: darkviolet;margin: 0;">
+  <h1 class="display-4" style="color:black;" id="">Welcome to this Bussiness Inteligence Solution App!</h1>
+  <p class="lead" style="color: black;">This is a simple App Where you can find Solution of Some Basic Problems
+    Like Health Analysis,OlA Rides Prediction and Student Performance Prediction Based
+    On there Performance.</p>
+  <hr class="my-4">
+  <p class="lead" style="color: black;">It simply use some Data regarding Your problems and fit that Data into a Machine Learning
+    Model and Analyse the result with almost 100% accuracy.</p>
+  <hr class="my-4">
+  <p class="lead" style="color: black;">
+    To Use this App Feature You first Create an Account so that in Future if You visit our
+    Site so you don't need to Sign Up.And If you already a Member of this Family so login to App.
+  </p>
+  <a class="btn btn-primary btn-lg" href="{{url_for('signup')}}" role="button">Create Account</a>
+</div>
+{% endblock %}
+
+
+
+
+

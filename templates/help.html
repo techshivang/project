@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+{% block content%}
+<div class="jumbotron" style="background-color: darkviolet;margin: 0;">
+  <h1 class="display-4" style="color:black;" id="">Welcome to this Bussiness Inteligence Solution App!</h1>
+  <p class="lead" style="color: black;">This is a simple App Where you can find Solution of Some Basic Problems
+    Like Health Analysis,OlA Rides Prediction,Student Performance Prediction Based and House Price Prediction
+    Based On there Performance.</p>
+  <hr class="my-4">
+  <img src="https://urbanmobilitydaily.com/wp-content/uploads/2019/10/uber_app_icon.jpg" style="width: 100px; height:100px;">
+  <h1 style="color: maroon;" class="display-4">FIRST MODEL IS UBER WEEKLY RIDES PREDICTION🚖</h1>
+  <ul>
+      <li><h1>.This Model work on 4-Input Features.</h1></li>
+      <li><h1>.You have to Provide all 4 Features to the Model.</h1></li>
+      <li><h1>.Remember🎗You have to pass only Integer Value In the Particular Input Field.</h1></li>
+      <li><h1>.Once you enter all the inputs and click on Predict Button you get your result.</h1></li>
+  </ul>  
+  
+  <a class="btn btn-primary btn-lg" href="{{url_for('home')}}" role="button">Back to Model</a>
+  <hr class="my-4">
+
+  <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2018/carcinoma.jpg" style="width: 100px; height:100px;">
+  <h1 style="color: maroon;" class="display-4">SECOND MODEL IS BREAST CANCER PREDICTION♋️</h1>
+  <ul>
+      <li><h1>.This Model work on 30-Input Features.</h1></li>
+      <li><h1>.You have to Provide all 30 Features to the Model.</h1></li>
+      <li><h1>.Remember🎗You have to pass either Integar or Floting Value In the Input Field.</h1></li>
+      <li><h1>.Once you enter all the inputs and click on Predict Button you get your result.</h1></li>
+  </ul>  
+
+  <a class="btn btn-primary btn-lg" href="{{url_for('health')}}" role="button">Back to Model</a>
+  <hr class="my-4">
+
+  <img src="https://tse2.mm.bing.net/th?id=OIP.TUXaqWI9UQ-hmO-Dv6qLhgHaHd&pid=Api&P=0&w=300&h=300" style="width: 100px; height:100px;">
+  <h1 style="color: maroon;" class="display-4">THIRD MODEL IS CORONA PATIENT PREDICTION♋️</h1>
+  <ul>
+      <li><h1>.This Model work on 5-Input Features.</h1></li>
+      <li><h1>So Bascially we have to create a dataset for this model.</h1></li>
+      <li><h1>The dataset created by using the instruction of Arogya Setu App.</h1></li>
+      <li><h1>.You have to Provide all 5 Features to the Model.</h1></li>
+      <li><h1>.Remember🎗You have to pass only Integar Value In the Input Field.</h1></li>
+      <li><h1>.Once you enter all the inputs and click on Predict Button you get your result.</h1></li>
+  </ul>  
+
+  <a class="btn btn-primary btn-lg" href="{{url_for('hello_world')}}" role="button">Back to Model</a>
+  <hr class="my-4">
+
+  <img src="https://tse2.mm.bing.net/th?id=OIP.RrsS6P2X2kyfEjbQIX8b-wHaHa&pid=Api&P=0&w=300&h=300" style="width: 100px; height:100px;">
+  <h1 style="color: maroon;" class="display-4">FOURTH MODEL IS STUDENT ACADEMIC PERFORMANCE PREDICTION👨‍🎓</h1>
+  <ul>
+      <li><h1>.This Model work on 34-Input Features.</h1></li>
+      <li><h1>.You have to Provide all 34 Features to the Model.</h1></li>
+      <li><h1>.Remember🎗You have to pass only Integar Value In the Input Field.</h1></li>
+      <li><h1>.Once you enter all the inputs and click on Predict Button you get your result.</h1></li>
+  </ul>  
+
+  <a class="btn btn-primary btn-lg" href="{{url_for('students')}}" role="button">Back to Model</a>
+  <hr class="my-4">
+
+  <img src="https://tse1.mm.bing.net/th?id=OIP.niEyhpASbuOkZZjafrjwcwHaHa&pid=Api&P=0&w=300&h=300" style="width: 100px; height:100px;">
+  <h1 style="color: maroon;" class="display-4">FIFTH MODEL IS HOUSE PRICE PREDICTION🏠</h1>
+  <ul>
+      <li><h1>.This Model work on 5-Input Features.</h1></li>
+      <li><h1>.So this model work on a USA Dataset.</h1></li>
+      <li><h1>.So That's why you get price value in $.</h1></li>
+      <li><h1>.You have to Provide all 5 Features to the Model.</h1></li>
+      <li><h1>.Remember🎗You have to pass only Integar Value In the Input Field.</h1></li>
+      <li><h1>.Once you enter all the inputs and click on Predict Button you get your result.</h1></li>
+  </ul>  
+
+  <a class="btn btn-primary btn-lg" href="{{url_for('boston')}}" role="button">Back to Model</a>
+  <hr class="my-4">
+
+
+</div>
+{% endblock %}
